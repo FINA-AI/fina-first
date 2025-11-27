@@ -1,0 +1,8 @@
+export const NotificationStatus = {
+  CREATED: "CREATED",
+  PUBLISHED: "PUBLISHED",
+  DELETED: "DELETED",
+  ACCEPTED: "ACCEPTED",
+  PENDING: "PENDING",
+  REJECTED: "REJECTED",
+};

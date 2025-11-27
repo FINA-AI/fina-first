@@ -1,0 +1,10 @@
+export const FieldType = {
+  STRING: "STRING",
+  DATE: "DATE",
+  NUMBER: "NUMBER",
+  LIST: "LIST",
+  PERCENTAGE: "PERCENTAGE",
+  PASSWORD: "PASSWORD",
+  USERS: "USERS",
+  TEXTAREA: "TEXTAREA",
+};

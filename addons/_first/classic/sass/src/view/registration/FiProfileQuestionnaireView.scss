@@ -1,0 +1,118 @@
+$color-ans-none: #878787;
+$color-ans-ok: #00870a;
+$color-ans-no: #cd0000;
+
+.first-question-table {
+  table-layout: fixed;
+  width: 100%;
+  flex: 1;
+}
+
+.first-question-fieldset {
+  margin-bottom: 10px;
+  padding: 15px 5px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  font-size: 16px;
+  position: relative;
+}
+
+.first-question-column {
+  width: 80%;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  color: #484848;
+}
+
+.first-buttons-column {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.first-questionnaire-btn {
+  float: left;
+  all: unset;
+  color: #b9b9b9;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0.4vw;
+  margin-top: 0.1vw;
+  font-size: calc(10px + 1vw);
+  &:hover:enabled {
+    color: #7d7d7d;
+  }
+}
+
+.first-questionnaire-btn:disabled {
+  cursor: default !important;
+}
+
+.answer-ok {
+  color: $color-ans-ok !important;
+  &:hover:enabled {
+    color: darken($color-ans-ok, 7%) !important;
+  }
+}
+
+.answer-no {
+  color: $color-ans-no !important;
+  &:hover:enabled {
+    color: darken($color-ans-no, 7%) !important;
+  }
+}
+
+.answer-none {
+  color: $color-ans-none;
+  &:hover:enabled {
+    color: darken($color-ans-none, 7%);
+  }
+}
+
+.first-questionnaire-note-text {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  margin-top: 1rem;
+  width: 100%;
+  height: 60px;
+  resize: none;
+  background: #fdfdfd;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  color: #656565;
+}
+
+.first-questionnaire-note-text:focus {
+  outline: none !important;
+  border: 1px solid $base-color;
+  box-shadow: 0 0 5px #0F3265;
+}
+
+.first-questionnaire-note-text:disabled {
+  color: #7f7f7f;
+  background: white;
+  box-shadow: none;
+}
+
+.questionnaire-no-data-available {
+  text-align: center;
+}
+
+.questionnaire-title-btn {
+  border: none;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.first-questionnaire-legend {
+  color: $base-color;
+  margin-left: 10px;
+}
+
+hr {
+  border-top: 1px solid #bbbbbb;
+  border-bottom: none;
+  border-left: none;
+}

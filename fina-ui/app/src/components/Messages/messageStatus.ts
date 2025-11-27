@@ -1,0 +1,20 @@
+export const MessageStatus = {
+  CREATED: "CREATED",
+  OUTBOX: "OUTBOX",
+  DELETED: "DELETED",
+  INBOX: "INBOX",
+  ACCEPTED: "ACCEPTED",
+  PENDING: "PENDING",
+  REJECTED: "REJECTED",
+};
+
+export const MessageReadStatus = {
+  SENT: "SENT",
+  PENDING: "PENDING",
+  INBOX: "INBOX",
+  READ: "READ",
+  REJECTED: "REJECTED",
+  CREATED: "CREATED",
+  PUBLISHED: "PUBLISHED",
+  OUTBOX: "OUTBOX",
+};

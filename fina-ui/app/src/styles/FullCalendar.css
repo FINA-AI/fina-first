@@ -1,0 +1,74 @@
+.fc-today-button {
+    background-color: #FFFFFF !important;
+    border: 1px solid #EAEBF0 !important;
+    color: #2C3644 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+
+.fc-addBtn-button {
+    background-color: #2962FF !important;
+    color: #FFFFFF !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    border-color: #2962FF !important;
+}
+
+.fc-prev-button, .fc-next-button,
+.fc-prevYear-button, .fc-nextYear-button {
+    background-color: #FFFFFF !important;
+    border: 1px solid #EAEBF0 !important;
+    color: #2C3644 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    border-radius: 50px;
+}
+
+.fc-toolbar-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #2A3341 !important;
+}
+
+.fc-toolbar-chunk {
+    display: inline !important;
+}
+
+.fc-toolbar h2 {
+    display: inline;
+}
+
+.fc-button-primary:hover {
+    outline: 0 !important;
+}
+
+.fc-daygrid-day-bottom {
+    margin-left: 10px !important;
+}
+
+.fc-popover {
+    z-index: 9 !important;
+}
+
+.fc-daygrid-day, .fc-daygrid-day-frame {
+    min-height: 0px !important;
+    height: 150px !important;
+    max-height: 150px !important;
+}
+
+.fc-scroller {
+    overflow: hidden !important;
+}
+
+.fc-col-header {
+    width: 100% !important;
+}
+
+.fc-daygrid-body {
+    width: 100% !important;
+}
+
+.fc-scrollgrid-sync-table {
+    width: 100% !important;
+}
+

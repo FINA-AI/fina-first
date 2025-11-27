@@ -1,0 +1,208 @@
+@if $theme-name != 'theme-graphite' {
+  // Graphite theme provides several mixins not available in other themes.
+  // Fashion resolves mixin dependencies at compilation time so a missing
+  // plugin is a compile time error. To work around this we provide a stub
+  // mixin in themes other than Graphite.
+  @mixin extjs-graphite-tab-ui(
+    $ui: null,
+    $base-color-active-over: null,
+    $background-opacity-active-over: null,
+    $color-active-over: null,
+    $opacity-active-over: null,
+    $glyph-color-active-over: null,
+    $glyph-opacity-active-over: null,
+    $closable-icon-glyph-color-active-over: null,
+    $closable-icon-opacity-active-over: null,
+    $color-pressed-focus: null,
+    $opacity-pressed-focus: null,
+    $inner-border-width-focus-over: null,
+    $inner-border-color-focus-over: null
+  ) {
+  }
+}
+
+@if $theme-name == 'theme-graphite' {
+  @include extjs-tab-panel-ui(
+          $ui: 'navigation',
+          $ui-tab-background-color: #686868,
+          $ui-tab-background-color-over: #aeaeae,
+          $ui-tab-background-color-active: #f2f2f2,
+          $ui-tab-background-color-focus-active: #56b4e9,
+          $ui-tab-background-gradient: 'none',
+          $ui-tab-background-gradient-over: 'none',
+          $ui-tab-background-gradient-active: 'none',
+          $ui-tab-background-opacity-over: null,
+          $ui-tab-color: #ffffff,
+          $ui-tab-color-focus: #56b4e9,
+          $ui-tab-color-over: rgba(27, 27, 27, 0.7),
+          $ui-tab-color-active: #1b1b1b,
+          $ui-tab-color-focus-active: #ffffff,
+          $ui-tab-glyph-color: #ffffff,
+          $ui-tab-glyph-color-over: rgba(27, 27, 27, 0.7),
+          $ui-tab-glyph-color-active: #1b1b1b,
+          $ui-tab-glyph-color-focus-active: #ffffff,
+          $ui-tab-glyph-opacity: 1,
+          $ui-tab-border-radius: 0,
+          $ui-tab-border-color: transparent,
+          $ui-tab-border-color-over: transparent,
+          $ui-tab-border-color-focus-active: #56b4e9,
+          $ui-tab-border-width: 0,
+          $ui-tab-inner-border-width: 0,
+          $ui-tab-padding: 24px,
+          $ui-tab-margin: 0,
+          $ui-tab-font-size: 15px,
+          $ui-tab-font-size-over: 15px,
+          $ui-tab-font-size-active: 15px,
+          $ui-tab-line-height: 19px,
+          $ui-tab-font-weight: bold,
+          $ui-tab-font-weight-over: bold,
+          $ui-tab-font-weight-active: bold,
+          $ui-tab-icon-width: 24px,
+          $ui-tab-icon-height: 24px,
+          $ui-bar-background-color: #404040,
+          $ui-bar-background-gradient: 'none',
+          $ui-bar-padding: 0,
+          $ui-strip-height: 0
+  );
+
+  @include extjs-graphite-tab-ui(
+          $ui: 'navigation',
+          $base-color-active-over: #bcbcbc,
+          $background-opacity-active-over: 1,
+          $color-active-over: #1b1b1b,
+          $opacity-active-over: 1,
+          $glyph-color-active-over: #1b1b1b,
+          $glyph-opacity-active-over: 1,
+          $closable-icon-glyph-color-active-over: #1b1b1b,
+          $closable-icon-opacity-active-over: 1,
+          $color-pressed-focus: #1b1b1b,
+          $opacity-pressed-focus: 0.7,
+          $inner-border-width-focus-over: 3px,
+          $inner-border-color-focus-over: #fff
+  );
+}
+
+@if $theme-name == 'theme-material' {
+  @include extjs-tab-panel-ui(
+          $ui: 'navigation',
+          $ui-tab-background-color: $base-color
+  );
+} @else {
+  @include extjs-tab-panel-ui(
+          $ui: 'navigation',
+          $ui-tab-background-color: transparent,
+          $ui-tab-background-color-over: #E1F0FB,
+          $ui-tab-background-color-active: #A9D1ED,
+          $ui-tab-background-gradient: 'none',
+          $ui-tab-background-gradient-over: 'none',
+          $ui-tab-background-gradient-active: 'none',
+          $ui-tab-color: #333,
+          $ui-tab-color-over: black,
+          $ui-tab-color-active: black,
+          $ui-tab-glyph-color: #333,
+          $ui-tab-glyph-color-over: black,
+          $ui-tab-glyph-color-active: #fff,
+          $ui-tab-glyph-opacity: 1,
+          $ui-tab-border-radius: 0,
+          $ui-tab-border-color: transparent,
+          $ui-tab-border-color-over: transparent,
+          $ui-tab-border-width: 1px,
+          $ui-tab-inner-border-width: 0,
+          $ui-tab-padding: 15px,
+          $ui-tab-margin: 0,
+          $ui-tab-font-size: 15px,
+          $ui-tab-font-size-over: 15px,
+          $ui-tab-font-size-active: 15px,
+          $ui-tab-line-height: 18px,
+          $ui-tab-font-weight: bold,
+          $ui-tab-font-weight-over: bold,
+          $ui-tab-font-weight-active: bold,
+          $ui-tab-icon-width: 24px,
+          $ui-tab-icon-height: 15px,
+          $ui-bar-background-color: whitesmoke,
+          $ui-bar-background-gradient: 'none',
+          $ui-bar-padding: 0,
+          $ui-strip-height: 0
+  );
+}
+
+.first-fiProfile-tbar-controller {
+  background-color: #ffe0b2;
+}
+
+.first-fiProfile-tbar-controller .x-toolbar-separator{
+  border-left-color:#2E343A!important;
+}
+
+.first-fiProfile-tbar-redactor {
+  background-color: #f5f5f5;
+}
+
+.first-fiProfile-tbar-redactor .x-toolbar-separator{
+  border-left-color:#2E343A!important;
+}
+
+.first-fiProfile-tbar-default{
+  background-color: #b1d0ea;
+}
+
+.first-fiProfile-tbar-default .x-toolbar-separator{
+  border-left-color:#2E343A!important;
+}
+
+
+.firstFiProfileSidebarTab {
+  border: 0;
+}
+
+.firstFiProfileSidebarTab .x-tab-wrap {
+  padding-left: 40px;
+}
+
+.firstFiProfileSidebarTab .x-tab-wrap:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border: 0.5px solid black;
+  top: 0;
+  left: 40px;
+}
+
+.firstFiProfileSidebarTab.x-tab-active .x-tab-wrap:after {
+  content: '';
+  border: none;
+}
+
+.firstFiProfileSidebarCommonTab .x-tab-inner {
+  font-weight: normal !important;
+  width: 100%;
+}
+
+.firstFiProfileSidebarTaskTab .x-tab-inner {
+  font-weight: bold !important;
+}
+.firstFiProfileSidebarTaskTabBorderTop{
+  cursor: default;
+  pointer-events: none;
+  border-top: 1px solid #707070;
+  margin-top: 32px;
+  height: 32px;
+}
+.firstFiProfileSidebarTaskTabBorderTop .x-tab-inner{
+  font-weight: normal !important;
+}
+
+.grid-canceled-row{
+  opacity: 0.3;
+}
+
+.responsive-window-margin{
+  margin: 10px 120px;
+}
+
+@media (max-width: 1366px) {
+  .responsive-window-margin{
+    margin: 10px 20px;
+  }
+}

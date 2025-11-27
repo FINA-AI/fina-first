@@ -1,0 +1,20 @@
+.fiRegistrationSearchFilterColumn {
+  @include responsivecolumn-item(50%);
+
+  .x-responsivecolumn-small & {
+    @include responsivecolumn-item(100%);
+  }
+  margin-bottom:0;
+
+  .x-responsivecolumn {
+    padding: 0;
+    margin: 0;
+
+  }
+  .x-responsivecolumn > * {
+  }
+  .x-field {
+    padding: 1px !important;
+
+  }
+}

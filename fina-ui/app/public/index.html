@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta
+            name="description"
+            content="FinA Web App"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" crossorigin="use-credentials"/>
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>FinA Web</title>
+    <style>
+        .dark-redTheme {
+            --color-background: #1a060f;
+        }
+
+        .dark-greenTheme {
+            --color-background: #182523;
+        }
+
+        .dark-blueTheme {
+            --color-background: #1a1b2d;
+        }
+
+        .dark-pastelTheme {
+            --color-background: #022e3d;
+        }
+
+        .dark-orangeTheme {
+            --color-background: #1e1510;
+        }
+
+        .dark-greyTheme {
+            --color-background: #0a0e0f;
+        }
+
+        .dark-lightGreenTheme {
+            --color-background: #191e16;
+        }
+
+        .dark-lightBlueTheme {
+            --color-background: #011f31;
+        }
+
+        .dark-brownTheme {
+            --color-background: #1a1312;
+        }
+
+        .light-redTheme {
+            --color-background: #fce4ec;
+        }
+
+        .light-greenTheme {
+            --color-background: #ecf8f7;
+        }
+
+        .light-blueTheme {
+            --color-background: #f0f1f8;
+        }
+
+        .light-pastelTheme {
+            --color-background: #c3dee0;
+        }
+
+        .light-orangeTheme {
+            --color-background: #faf2e5;
+        }
+
+        .light-greyTheme {
+            --color-background: #efeff4;
+        }
+
+        .light-lightGreenTheme {
+            --color-background: #e0e7db;
+        }
+
+        .light-lightBlueTheme {
+            --color-background: #efeff4;
+        }
+
+        .light-brownTheme {
+            --color-background: #efeff4;
+        }
+
+        #root {
+            background: var(--color-background);
+        }
+
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body style="margin: 0px;">
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root">
+    <div class="loading-spinner" id="spinner-giff">
+        <img src="%PUBLIC_URL%/images/spinner.gif" alt="spinner"/>
+    </div>
+</div>
+
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
+
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
+
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+<script>
+    (function () {
+        let themeColor = localStorage.getItem("finaThemeColor");
+        themeColor = themeColor ? themeColor : "blueTheme";
+        let themeType = localStorage.getItem("finaThemeType");
+        // let scrollbarBgColor = themeType === 'dark' ? "#6e7481" : "#f6f6f8"
+        // // document.documentElement.style.setProperty(
+        // //     `--scrollbar-color-background`,
+        // //     scrollbarBgColor
+        // // );
+        if (themeType === "dark") {
+            document.documentElement.className = "dark-" + themeColor;
+        } else {
+            document.documentElement.className = "light-" + themeColor;
+        }
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+.hr-text-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hr-text-title {
+  flex-grow: 0;
+  font-size: 14px;
+}
+
+.hr-divider {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #9f9f9f;
+}
+
+.dashboard-widget-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #0000EE;
+}
+
+.dashboard-widget-link:hover {
+  text-decoration: underline;
+}
+
+.dashboard-widget-link:not( :hover ) {
+  text-decoration: none;
+}
+
+.dashboard-widget-box-icon {
+  float: right;
+  color: #157fcc;
+}
+
+.common-dashboard {
+  background-color: #f5f5f5;
+}
+
+.common-dashboard-widget{
+  border-radius: 15px;
+}
+
+.dashboard-task-widget {
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+.dashboard-widget-process-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: black;
+  text-decoration: none;
+  cursor: auto;
+}
+
+.dashboard-widget-process-link {
+  font-size: 16px;
+  line-height: 16px;
+  color: #535353;
+  text-decoration: none;
+}
+
+.dashboard-widget-process-title-body {
+  margin: 10px 10px 20px 10px;
+}
+
+.dashboard-widget-process-link-body {
+  margin: 10px;
+}
+
+.dashboard-widget-process-link:hover {
+  color: black;
+}
+
+.dashboard-widget-search-field {
+  text-align: center;
+  height:30px;
+}
+
+.dashboard-widget-search .x-form-text-wrap, .dashboard-widget-search .x-form-trigger-wrap {
+  border-radius: 15px;
+}
+
+
+@media (max-height: 770px) {
+  .dashboard-widget-process-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .dashboard-widget-process-link {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .dashboard-widget-process-title-body {
+    margin: 10px 5px;
+  }
+
+  .dashboard-widget-process-link-body {
+    margin: 5px;
+  }
+}
+
+@media (max-height: 600px) {
+  .dashboard-widget-process-title {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .dashboard-widget-process-link {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  .dashboard-widget-process-title-body {
+    margin: 5px 2px;
+  }
+
+  .dashboard-widget-process-link-body {
+    margin: 2px;
+  }
+
+  .dashboard-widget-search-field {
+    text-align: center;
+    height:27px;
+  }
+  .dashboard-widget-search .x-form-text-wrap, .dashboard-widget-search .x-form-trigger-wrap {
+    height:28px;
+  }
+
+}
+
+.dashboard-widget-helper-Button {
+  font-size: 2em;
+  cursor: pointer;
+}
