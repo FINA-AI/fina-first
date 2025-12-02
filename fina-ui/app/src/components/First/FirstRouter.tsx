@@ -9,6 +9,7 @@ import { Box, CircularProgress } from '@mui/material';
 // Lazy load pages
 const FirstMainPage = React.lazy(() => import('./FirstMainPage'));
 const RegistrationPage = React.lazy(() => import('./Registration/RegistrationPage'));
+const RegistrationCreatePage = React.lazy(() => import('./Registration/RegistrationCreatePage'));
 const RegistrationDetailPage = React.lazy(() => import('./Registration/RegistrationDetailPage'));
 const TaskPage = React.lazy(() => import('./Task/TaskPage'));
 const OrganizationPage = React.lazy(() => import('./Organization/OrganizationPage'));
@@ -44,6 +45,7 @@ const FirstRouter: React.FC<FirstRouterProps> = ({ config }) => {
 
         {/* Registration module routes */}
         <Route exact path="/first/registration" component={RegistrationPage} />
+        <Route exact path="/first/registration/new" component={RegistrationCreatePage} />
         <Route path="/first/registration/:fiId" component={RegistrationDetailPage} />
 
         {/* Task management */}
