@@ -88,6 +88,10 @@ const Bundles = React.lazy(
   () => import("../../containers/Bundles/BundlesContainer")
 );
 
+const First = React.lazy(
+  () => import("../../components/First/FirstRouter")
+);
+
 const menuItems: MainMenuItem[] = [
   {
     key: "fi",
@@ -335,6 +339,7 @@ const menuItems: MainMenuItem[] = [
     isOpened: false,
     i18nKey: "menu_first",
     permissions: [PERMISSIONS.FINA_FIRST],
+    component: First,
   },
   {
     key: "matrix",
@@ -363,6 +368,7 @@ const menuItems: MainMenuItem[] = [
     isOpened: false,
     i18nKey: "menu_first_dashboard",
     permissions: [PERMISSIONS.FIRST_DASHBOARD],
+    component: First,
   },
 ];
 

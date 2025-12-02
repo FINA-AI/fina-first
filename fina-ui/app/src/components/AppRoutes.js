@@ -34,7 +34,14 @@ const AppRoutes = ({ config }) => {
       menuItem?.permissions.length === 0 ||
       config.permissions.some((cs) => menuItem.permissions.includes(cs));
 
-    if (menuItem.iframeSrc && menuItem.iframeSrc.trim().length > 0) {
+    // Priority: React component > iframe
+    // If a React component is provided, use it (even if iframeSrc exists)
+    if (component) {
+      return hasPermission ? component : <>No Permission</>;
+    }
+
+    // Only use iframe if no React component is provided
+    if (menuItem?.iframeSrc && menuItem.iframeSrc.trim().length > 0) {
       return (
         <Iframe
           src={`${window.location.origin}/fina-app/${menuItem.iframeSrc}`}
@@ -43,6 +50,7 @@ const AppRoutes = ({ config }) => {
         />
       );
     }
+
     return hasPermission ? component : <>No Permission</>;
   };
 
