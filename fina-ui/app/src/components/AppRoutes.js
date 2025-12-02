@@ -47,6 +47,7 @@ const AppRoutes = ({ config }) => {
   };
 
   const FI = React.lazy(() => import("./FI/FIRouter"));
+  const First = React.lazy(() => import("./First/FirstRouter"));
   const UserManager = React.lazy(() =>
     import("./UserManagement/UserManagerRouter")
   );
@@ -267,11 +268,11 @@ const AppRoutes = ({ config }) => {
         />
         <Route
           path={menuLink.first}
-          render={() => renderMenuItem(menuLink.first)}
+          render={() => renderMenuItem(menuLink.first, <First config={config} />)}
         />
         <Route
           path={menuLink.firstDashboard}
-          render={() => renderMenuItem(menuLink.firstDashboard)}
+          render={() => renderMenuItem(menuLink.firstDashboard, <First config={config} />)}
         />
         <Route
           path={menuLink.documentManagement}
