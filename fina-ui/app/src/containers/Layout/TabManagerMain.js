@@ -55,10 +55,13 @@ const TabManagerMain = ({ config, tabs, setTabs, dataMenu }) => {
 
         const menuItem = tab.item;
 
+        // Priority: React component > iframe
+        // Only use iframe if no React component is defined
         if (
           menuItem &&
           menuItem.iframeSrc &&
-          menuItem.iframeSrc.trim().length > 0
+          menuItem.iframeSrc.trim().length > 0 &&
+          !Component // ✅ Only use iframe if Component is undefined
         ) {
           const CreateIframe = () => {
             return (
