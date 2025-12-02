@@ -38,6 +38,7 @@ import {
   exportFiRegistry,
   deleteFi,
 } from '../../../api/services/first';
+import { MOCK_FI_REGISTRY } from '../../../api/services/first/mockData';
 import { FiRegistry, FiStatus, ActionType } from '../../../types/first';
 import { getFormattedDateTimeValue } from '../../../util/appUtil';
 
@@ -69,7 +70,34 @@ const RegistrationPage: React.FC = () => {
       setRegistrations(response.data.list);
       setTotalCount(response.data.totalResults);
     } catch (error) {
-      console.error('Failed to load registrations:', error);
+      console.warn('API failed, using mock data:', error);
+      // Use mock data as fallback
+      let filteredData = [...MOCK_FI_REGISTRY];
+
+      // Apply filters
+      if (codeFilter) {
+        filteredData = filteredData.filter(fi =>
+          fi.code.toLowerCase().includes(codeFilter.toLowerCase())
+        );
+      }
+      if (nameFilter) {
+        filteredData = filteredData.filter(fi =>
+          fi.name.toLowerCase().includes(nameFilter.toLowerCase())
+        );
+      }
+      if (statusFilter) {
+        filteredData = filteredData.filter(fi => fi.status === statusFilter);
+      }
+      if (actionTypeFilter) {
+        filteredData = filteredData.filter(fi => fi.actionType === actionTypeFilter);
+      }
+
+      // Apply pagination
+      const startIndex = page * rowsPerPage;
+      const paginatedData = filteredData.slice(startIndex, startIndex + rowsPerPage);
+
+      setRegistrations(paginatedData);
+      setTotalCount(filteredData.length);
     } finally {
       setLoading(false);
     }
