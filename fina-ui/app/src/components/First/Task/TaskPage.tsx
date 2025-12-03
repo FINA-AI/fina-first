@@ -206,6 +206,7 @@ const TaskPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               label="Task Name"
               value={nameFilter}
@@ -215,6 +216,7 @@ const TaskPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="State"
@@ -230,6 +232,7 @@ const TaskPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               label="Assignee"
               value={assigneeFilter}

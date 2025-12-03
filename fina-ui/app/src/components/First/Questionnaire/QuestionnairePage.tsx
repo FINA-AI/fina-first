@@ -196,6 +196,7 @@ const QuestionnairePage: React.FC = () => {
             <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
+                variant="outlined"
                 size="small"
                 label="Question Text / Key"
                 value={questionFilter}
@@ -205,6 +206,7 @@ const QuestionnairePage: React.FC = () => {
             <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
+                variant="outlined"
                 size="small"
                 select
                 label="Type"
@@ -223,6 +225,7 @@ const QuestionnairePage: React.FC = () => {
             <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
+                variant="outlined"
                 size="small"
                 select
                 label="Status"
@@ -360,6 +363,7 @@ const QuestionnairePage: React.FC = () => {
             <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
+                variant="outlined"
                 size="small"
                 label="Group Name"
                 value={groupFilter}

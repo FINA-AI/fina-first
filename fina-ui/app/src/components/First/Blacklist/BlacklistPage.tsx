@@ -177,6 +177,7 @@ const BlacklistPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={3}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               label="Name / ID Number"
               value={nameFilter}
@@ -186,6 +187,7 @@ const BlacklistPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={3}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Person Type"
@@ -200,6 +202,7 @@ const BlacklistPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={3}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Status"
@@ -214,6 +217,7 @@ const BlacklistPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={3}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Sanction Type"

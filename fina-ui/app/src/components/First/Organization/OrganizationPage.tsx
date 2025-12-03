@@ -114,6 +114,7 @@ const OrganizationPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               label="Name / Tax ID"
               value={nameFilter}
@@ -123,6 +124,7 @@ const OrganizationPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Type"
@@ -137,6 +139,7 @@ const OrganizationPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Status"

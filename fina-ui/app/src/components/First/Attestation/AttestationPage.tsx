@@ -165,6 +165,7 @@ const AttestationPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               label="Candidate Name"
               value={nameFilter}
@@ -174,6 +175,7 @@ const AttestationPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Status"
@@ -189,6 +191,7 @@ const AttestationPage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Type"

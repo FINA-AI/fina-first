@@ -130,6 +130,7 @@ const FiTypePage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               label="Type Name / Code"
               value={nameFilter}
@@ -139,6 +140,7 @@ const FiTypePage: React.FC = () => {
           <Grid item xs={12} sm={6} md={4}>
             <TextField
               fullWidth
+              variant="outlined"
               size="small"
               select
               label="Status"
