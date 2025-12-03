@@ -132,7 +132,7 @@ const LicenseTypePage: React.FC = () => {
   };
 
   return (
-    <Box sx={{ p: 3 }}>
+    <Box sx={{ height: '100%', overflow: 'auto', p: 3 }}>
       <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
         <Typography variant="h4">License Type Configuration</Typography>
         <Box>
