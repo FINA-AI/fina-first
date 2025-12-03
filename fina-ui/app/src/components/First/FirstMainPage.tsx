@@ -115,8 +115,9 @@ const FirstMainPage: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="xl" sx={{ py: 4 }}>
-      <Box mb={4}>
+    <Box sx={{ height: '100%', overflow: 'auto' }}>
+      <Container maxWidth="xl" sx={{ py: 4 }}>
+        <Box mb={4}>
         <Typography variant="h3" component="h1" gutterBottom>
           FIRST Module
         </Typography>
@@ -168,7 +169,8 @@ const FirstMainPage: React.FC = () => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 
