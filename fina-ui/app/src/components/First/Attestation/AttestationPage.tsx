@@ -402,7 +402,7 @@ const AttestationPage: React.FC = () => {
                                 Documents
                               </Typography>
                               <Grid container spacing={2}>
-                                {attestation.documents.map((doc: any, index: number) => (
+                                {(attestation.documents || []).map((doc: any, index: number) => (
                                   <Grid item xs={12} sm={6} md={4} key={index}>
                                     <Paper
                                       sx={{
