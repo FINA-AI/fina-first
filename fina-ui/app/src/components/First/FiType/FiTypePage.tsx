@@ -201,7 +201,7 @@ const FiTypePage: React.FC = () => {
                   </TableCell>
                   <TableCell>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                      {type.branchTypes.slice(0, 2).map((branchType: string, index: number) => (
+                      {(type.branchTypes || []).slice(0, 2).map((branchType: string, index: number) => (
                         <Chip
                           key={index}
                           label={branchType}
@@ -209,7 +209,7 @@ const FiTypePage: React.FC = () => {
                           variant="outlined"
                         />
                       ))}
-                      {type.branchTypes.length > 2 && (
+                      {(type.branchTypes || []).length > 2 && (
                         <Chip
                           label={`+${type.branchTypes.length - 2}`}
                           size="small"
@@ -222,7 +222,7 @@ const FiTypePage: React.FC = () => {
                   <TableCell>
                     <Chip
                       icon={<AccountTree />}
-                      label={`${Object.keys(type.workflows).length} workflows`}
+                      label={`${Object.keys(type.workflows || {}).length} workflows`}
                       size="small"
                       color="info"
                     />
@@ -318,7 +318,7 @@ const FiTypePage: React.FC = () => {
                     Branch Types
                   </Typography>
                   <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                    {selectedType.branchTypes.map((branchType: string, index: number) => (
+                    {(selectedType.branchTypes || []).map((branchType: string, index: number) => (
                       <Chip
                         key={index}
                         label={branchType}
